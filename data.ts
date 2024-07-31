@@ -1,7 +1,6 @@
 import {IFormMovie, IMovie, IMovieCollection} from "./interfaces";
 
-export function AddMovie(movieCollection: IMovie[], newMovie: IMovie): IMovie[]
-{
+export function AddMovie(movieCollection: IMovie[], newMovie: IMovie): IMovie[] {
     return [...movieCollection, newMovie]
 }
 

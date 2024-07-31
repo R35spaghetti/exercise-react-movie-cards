@@ -1,7 +1,9 @@
+import {MovieForm} from "./components/Form-Movie/MovieForm.tsx";
+
 export function App() {
-  return (
-    <>
-      <h1>This is the App component</h1>
-    </>
-  );
+    return (
+        <>
+            <MovieForm/>
+        </>
+    );
 }
