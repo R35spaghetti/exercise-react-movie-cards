@@ -12,6 +12,15 @@ export function MovieForm({onSubmit}: IMovieFormProps) {
             description: "",
         }
     )
+
+    const clearInputs = () => {
+        setMovie({
+            title: "",
+            rating: 0,
+            genre: "",
+            description: "",
+        });
+    };
     const genres = ['Action', 'Adventure', 'Comedy', 'Drama', 'Horror'];
 
     function HandleInput(event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLTextAreaElement>) {
@@ -52,6 +61,7 @@ export function MovieForm({onSubmit}: IMovieFormProps) {
                 <textarea name="description" value={formMovie.description} onChange={HandleInput}></textarea>
             </label>
             <br/>
+            <button type="button" onClick={clearInputs}>Clear</button>
             <button type="submit">Submit</button>
         </form>
     )
