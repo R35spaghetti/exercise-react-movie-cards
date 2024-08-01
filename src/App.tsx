@@ -1,15 +1,11 @@
-import {MovieForm} from "./components/Form-Movie/MovieForm.tsx";
-import {IMovieForm} from "../interfaces.tsx";
+import {ShowMovieCard} from "./components/Form-Movie/ShowMovieCard.tsx";
 
 export function App() {
-    //foo
-    const handleSubmit = (data: IMovieForm) => {
-        console.log(data);
-    };
+
 
     return (
         <>
-            <MovieForm onSubmit={handleSubmit}/>
+            <ShowMovieCard/>
         </>
     );
 }
