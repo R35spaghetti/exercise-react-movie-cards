@@ -2,6 +2,7 @@ import {IMovie, IMovieForm} from "../../../interfaces.tsx";
 import {MovieForm} from "./MovieForm.tsx";
 import {ReactElement, useState} from "react";
 import {AddMovie} from "../../../data.ts";
+import {MovieCard} from "../Card-Movie/MovieCard.tsx";
 
 
 export function ShowMovieCard(): ReactElement {
@@ -23,18 +24,7 @@ export function ShowMovieCard(): ReactElement {
     return (
         <>
             <MovieForm onSubmit={handleSubmit}/>
-            {/*//foo*/}
-            <div className="present-movieCards">
-                {movieCollection.map((movie) =>
-                    (
-                        <div key={movie.id}>
-                            <h2>{movie.title}</h2>
-                            <p>{movie.rating}</p>
-                            <p>{movie.genre}</p>
-                            <p>{movie.description}</p>
-                        </div>
-                    ))}
-            </div>
+            <MovieCard collection={movieCollection}></MovieCard>
         </>
     );
 }

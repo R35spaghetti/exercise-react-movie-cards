@@ -1,12 +1,12 @@
-import {IMovieCardProps} from "../../../interfaces.tsx";
+import {IMovieCollection} from "../../../interfaces.tsx";
 import {ReactElement} from "react";
 
-export function MovieCard({MovieCollection}: IMovieCardProps): ReactElement {
+export function MovieCard({collection}: IMovieCollection): ReactElement {
 
     return (
         <>
             <div className="MovieCard">
-                {MovieCollection.collection.map((movie) =>
+                {collection.map((movie) =>
                     (
                         <div key={movie.id}>
                             <h2>{movie.title}</h2>
