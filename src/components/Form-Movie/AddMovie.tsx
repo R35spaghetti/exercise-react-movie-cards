@@ -21,7 +21,7 @@ export function AddMovie({onSubmit}: IMovieFormProps) {
             description: "",
         });
     };
-    const genres = ['Adventure', 'Comedy', 'Drama', 'Horror'];
+    const genres = ['Action','Adventure', 'Comedy', 'Drama','Horror'];
 
     function HandleInput(event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLTextAreaElement>) {
         const {name, value} = event.target;
@@ -50,7 +50,6 @@ export function AddMovie({onSubmit}: IMovieFormProps) {
             <label>
                 Genre:
                 <select id="genre" name="genre" value={formMovie.genre} onChange={HandleInput}>
-                    <option value="">Action</option>
                     {genres.map((genre) => (
                         <option key={genre} value={genre}>{genre}</option>
                     ))}
