@@ -1,7 +1,7 @@
 import {IMovie, IMovieForm} from "../../../interfaces.tsx";
 import {MovieForm} from "./MovieForm.tsx";
 import {ReactElement, useState} from "react";
-import {AddMovie} from "../../../data.ts";
+import {AddMovie, DeleteMovieByIndex} from "../../../data.ts";
 import {MovieCard} from "../Card-Movie/MovieCard.tsx";
 
 let idCount = 0;
@@ -21,12 +21,16 @@ export function ShowMovieCard(): ReactElement {
         const updatedMovieCollection = AddMovie(movieCollection, movie);
         idCount++;
         setMovieCollection(updatedMovieCollection);
-
     };
+    function handleDeleteMovie(index: number) {
+        const newMovies = DeleteMovieByIndex(movieCollection, index);
+        setMovieCollection(newMovies);
+    }
+
     return (
         <>
             <MovieForm onSubmit={handleSubmit}/>
-            <MovieCard collection={movieCollection}></MovieCard>
+            <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
         </>
     );
 }

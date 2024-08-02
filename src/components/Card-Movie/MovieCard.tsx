@@ -1,14 +1,14 @@
-import {IMovieCollection} from "../../../interfaces.tsx";
+import {IMovieCardProps} from "../../../interfaces.tsx";
 import {ReactElement} from "react";
 
-export function MovieCard({collection}: IMovieCollection): ReactElement {
+export function MovieCard({movieCollection, onDelete}: IMovieCardProps): ReactElement {
 
     return (
         <>
             <div className="MovieCard">
-                {collection.map((movie) =>
+                {movieCollection.map((movie) =>
                     (
-                        <div key={movie.id}>
+                        <div key={movie.id} onClick={() => onDelete(movie.id)} style={{cursor: 'pointer'}}>
                             <h2>{movie.title}</h2>
                             <p>{movie.rating}</p>
                             <p>{movie.genre}</p>
