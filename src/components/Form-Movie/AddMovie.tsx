@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./MovieForm.css"
 import {IMovieForm, IMovieFormProps} from "../../../interfaces.tsx";
 
-export function MovieForm({onSubmit}: IMovieFormProps) {
+export function AddMovie({onSubmit}: IMovieFormProps) {
 
     const [formMovie, setMovie] = useState<IMovieForm>(
         {
@@ -31,6 +31,7 @@ export function MovieForm({onSubmit}: IMovieFormProps) {
     function HandleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         onSubmit(formMovie);
+        console.log(formMovie);
     }
 
     return (

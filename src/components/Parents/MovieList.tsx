@@ -1,7 +1,7 @@
 import {IMovie, IMovieForm} from "../../../interfaces.tsx";
-import {MovieForm} from "../Form-Movie/MovieForm.tsx";
+import {AddMovie} from "../Form-Movie/AddMovie.tsx";
 import {ReactElement, useState} from "react";
-import {AddMovie, DeleteMovieByIndex} from "../../../data.ts";
+import {AddMovieToArray, DeleteMovieByIndex} from "../../../data.ts";
 import {MovieCard} from "../Card-Movie/MovieCard.tsx";
 
 let idCount = 0;
@@ -10,7 +10,6 @@ export function MovieList(): ReactElement {
 
     const [movieCollection, setMovieCollection] = useState<IMovie[]>([]);
     const handleSubmit = (data: IMovieForm) => {
-        console.log(data);
         const movie: IMovie = {
             id: idCount,
             title: data.title,
@@ -18,7 +17,7 @@ export function MovieList(): ReactElement {
             genre: data.genre,
             description: data.description,
         };
-        const updatedMovieCollection = AddMovie(movieCollection, movie);
+        const updatedMovieCollection = AddMovieToArray(movieCollection, movie);
         idCount++;
         setMovieCollection(updatedMovieCollection);
     };
@@ -29,7 +28,7 @@ export function MovieList(): ReactElement {
 
     return (
         <>
-            <MovieForm onSubmit={handleSubmit}/>
+            <AddMovie onSubmit={handleSubmit}/>
             <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
         </>
     );
