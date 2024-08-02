@@ -21,6 +21,7 @@ export function MovieList(): ReactElement {
         idCount++;
         setMovieCollection(updatedMovieCollection);
     };
+
     function handleDeleteMovie(index: number) {
         const newMovies = DeleteMovieByIndex(movieCollection, index);
         setMovieCollection(newMovies);
@@ -29,7 +30,9 @@ export function MovieList(): ReactElement {
     return (
         <>
             <AddMovie onSubmit={handleSubmit}/>
-            <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
+            <div className="MovieCard-Container">
+                <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
+            </div>
         </>
     );
 }

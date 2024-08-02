@@ -1,0 +1,19 @@
+.MovieCard-Container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: start;
+}
+
+.MovieCard {
+    display: grid;
+    background-color: #FFD700;
+    padding: 5px;
+    border: 15px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    cursor: pointer;
+}
