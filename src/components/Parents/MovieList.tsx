@@ -6,7 +6,7 @@ import {MovieCard} from "../Card-Movie/MovieCard.tsx";
 
 let idCount = 0;
 
-export function ShowMovieCard(): ReactElement {
+export function MovieList(): ReactElement {
 
     const [movieCollection, setMovieCollection] = useState<IMovie[]>([]);
     const handleSubmit = (data: IMovieForm) => {

@@ -1,11 +1,11 @@
-import {ShowMovieCard} from "./components/Parents/ShowMovieCard.tsx";
+import {MovieList} from "./components/Parents/MovieList.tsx";
 
 export function App() {
 
 
     return (
         <>
-            <ShowMovieCard/>
+            <MovieList/>
         </>
     );
 }
