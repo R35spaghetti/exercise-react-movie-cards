@@ -1,7 +1,7 @@
 .MovieCard-Container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 10rem);
+    grid-template-rows: auto;
     gap: 10px;
     justify-items: center;
     align-items: start;

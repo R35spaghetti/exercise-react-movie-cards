@@ -3,7 +3,6 @@ import {AddMovie} from "../Form-Movie/AddMovie.tsx";
 import {ReactElement, useState} from "react";
 import {AddMovieToArray, DeleteMovieByIndex} from "../../../data.ts";
 import {MovieCard} from "../Card-Movie/MovieCard.tsx";
-
 let idCount = 0;
 
 export function MovieList(): ReactElement {
@@ -30,9 +29,7 @@ export function MovieList(): ReactElement {
     return (
         <>
             <AddMovie onSubmit={handleSubmit}/>
-            <div className="MovieCard-Container">
-                <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
-            </div>
+            <MovieCard movieCollection={movieCollection} onDelete={handleDeleteMovie}></MovieCard>
         </>
     );
 }
