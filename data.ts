@@ -18,6 +18,6 @@ export function SetMovie(setMovie: (movie: IMovie) => void, {id}: { id: number }
 }
 
 export function DeleteMovieByIndex(movies: IMovie[], index: number): IMovie[] {
-    return movies.splice(index, 1);
+    return movies.filter(movie => movie.id !== index);
 }
 
