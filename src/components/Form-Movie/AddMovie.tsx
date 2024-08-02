@@ -8,7 +8,7 @@ export function AddMovie({onSubmit}: IMovieFormProps) {
         {
             title: "",
             rating: 0,
-            genre: "",
+            genre: "Action",
             description: "",
         }
     )
