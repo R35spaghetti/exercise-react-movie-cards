@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./MovieForm.css"
+import "./AddMovie.css"
 import {IMovieForm, IMovieFormProps} from "../../../interfaces.tsx";
 
 export function AddMovie({onSubmit}: IMovieFormProps) {
