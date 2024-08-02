@@ -1,5 +1,5 @@
 import {IMovie, IMovieForm} from "../../../interfaces.tsx";
-import {MovieForm} from "./MovieForm.tsx";
+import {MovieForm} from "../Form-Movie/MovieForm.tsx";
 import {ReactElement, useState} from "react";
 import {AddMovie, DeleteMovieByIndex} from "../../../data.ts";
 import {MovieCard} from "../Card-Movie/MovieCard.tsx";

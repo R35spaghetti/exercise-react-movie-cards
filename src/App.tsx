@@ -1,4 +1,4 @@
-import {ShowMovieCard} from "./components/Form-Movie/ShowMovieCard.tsx";
+import {ShowMovieCard} from "./components/Parents/ShowMovieCard.tsx";
 
 export function App() {
 
