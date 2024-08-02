@@ -5,10 +5,6 @@ export interface IMovieForm {
     description: string;
 }
 
-export interface IMovieCollection {
-    collection: IMovie[]
-}
-
 export interface IMovie {
     id: number;
     title: string;
