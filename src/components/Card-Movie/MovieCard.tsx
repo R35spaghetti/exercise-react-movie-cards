@@ -1,4 +1,4 @@
-import {IMovieCardProps} from "../../../interfaces.tsx";
+import {IMovieCardProps} from "../../interfaces.tsx";
 import {ReactElement} from "react";
 import "./MovieCard.css"
 

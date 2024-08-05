@@ -1,4 +1,4 @@
-import {IMovie} from "./interfaces";
+import {IMovie} from "./interfaces.tsx";
 
 export function AddMovieToArray(movieCollection: IMovie[], newMovie: IMovie): IMovie[] {
     return [...movieCollection, newMovie]
